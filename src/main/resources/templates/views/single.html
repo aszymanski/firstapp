@@ -11,7 +11,7 @@
     <title th:text="${pageTitle}">Blog Post - List</title>
 
     <!-- CSS th:href="@{/css/blog.css}" -->
-    <link rel="stylesheet" href="../static/css/blog.css" th:href="@{/css/blog.css}"/>
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{../static/css/style.css}"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
@@ -23,7 +23,6 @@
     <![endif]-->
 </head>
 <body>
-
 <div class="container">
 
     <nav class="navbar navbar-default">
@@ -42,9 +41,7 @@
             </div>
         </div>
     </nav>
-
-    <!-- STEP 3: Dipslay Each Post - th:each="post : ${posts}" -->
-     <article th:each="post : ${posts}">
+    <article>
         <header>
             <!-- Blog Post Title - ${post.title} -->
             <h1 th:text="${post.title}">My Blog Post Title</h1>
@@ -68,14 +65,11 @@
         </footer>
         <hr/>
     </article>
-
     <footer>
         <p>Copyright &copy; 2015</p>
     </footer>
-
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" ></script>
 </body>
 </html>
