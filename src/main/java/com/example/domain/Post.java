@@ -1,39 +1,40 @@
 package com.example.domain;
 
-import org.springframework.data.annotation.CreatedDate;
-import javax.persistence.*;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.math.BigInteger;
 import java.util.Date;
 
-/**
- * Created by adria on 06.05.2017.
- */
-@Entity
+@Document
 public class Post {
 
-    @Id @GeneratedValue
-    private Long id;
+    @Id
+    private BigInteger id;
     private String title;
-
-    @Column(columnDefinition = "TEXT")
     private String body;
-
+    private String teaser;
+    private String slug;
     private Date postedOn;
 
-    @ManyToOne
+    @DBRef
     private Author author;
 
-
-    //private no arg constructor is needed by JPA
-//    private Post(){
-//
-//    }
-
     public Post(){
-
     }
 
     public Post(String title){
-        this.setTitle(title);
+        this.title = title;
+    }
+
+    public BigInteger getId() {
+        return id;
+    }
+
+    public void setId(BigInteger id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -50,6 +51,22 @@ public class Post {
 
     public void setBody(String body) {
         this.body = body;
+    }
+
+    public String getTeaser() {
+        return teaser;
+    }
+
+    public void setTeaser(String teaser) {
+        this.teaser = teaser;
+    }
+
+    public String getSlug() {
+        return slug;
+    }
+
+    public void setSlug(String slug) {
+        this.slug = slug;
     }
 
     public Date getPostedOn() {
@@ -70,9 +87,6 @@ public class Post {
 
     @Override
     public String toString() {
-        return "Post{" +
-                "title='" + title + '\'' +
-                "body='" + body + '\'' +
-                '}';
+        return "Post{title=" + title + "]";
     }
 }

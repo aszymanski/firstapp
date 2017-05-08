@@ -35,7 +35,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">therealdanvega.com</a>
+                <a class="navbar-brand" href="/">My.Example</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
                 <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Guest User</a></p>
@@ -44,7 +44,7 @@
     </nav>
 
     <!-- STEP 3: Dipslay Each Post - th:each="post : ${posts}" -->
-    <article th:each="post : ${posts}">
+     <article th:each="post : ${posts}">
         <header>
             <!-- Blog Post Title - ${post.title} -->
             <h1 th:text="${post.title}">My Blog Post Title</h1>
@@ -52,10 +52,10 @@
             <!-- Blog Post Date - th:text="${post.posted} -->
             <!-- date formatting th:text="${#calendars.format(post.posted,'mm/dd/yyyy')}" -->
             <!-- http://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html#expression-utility-objects -->
-            <p th:text="${#calendars.format(post.posted,'mm/dd/yyyy')}">Posted on October 31, 2015 at 10:00 PM</p>
+
         </header>
         <!-- Post Body th:utext="${post.body}" -->
-        <section th:utext="${post.body}">
+        <section>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac finibus mi. Morbi porttitor urna dui, sed volutpat justo rutrum sit amet. Etiam elementum lacus eget malesuada egestas. Sed id lectus arcu. Pellentesque molestie dignissim diam non commodo. Nunc nec aliquet lectus. Ut a accumsan sapien. Pellentesque sit amet sem nisl. Nulla fringilla vulputate mauris, eleifend dapibus libero. Sed eu cursus orci. In hac habitasse platea dictumst. Vestibulum vel vulputate ex. Nam gravida blandit nisl, at luctus mi interdum ut. Pellentesque et pharetra mi. Proin id placerat diam. Ut porttitor risus in leo tincidunt, a iaculis velit maximus.</p>
             <p>Nunc bibendum sollicitudin ex, vitae lobortis nunc malesuada eget. Maecenas aliquam aliquam elit, nec rutrum justo blandit sit amet. Cras pellentesque egestas nisi at egestas. Donec lacus ipsum, dignissim a accumsan quis, rutrum ac massa. Vivamus sed dolor nisl. Integer convallis, elit sed euismod molestie, purus velit ornare justo, ac maximus diam odio id felis. Maecenas auctor sed quam ac aliquet. Curabitur tempus sed purus sit amet blandit.</p>
             <p>Curabitur eget arcu elementum, pulvinar odio ut, dictum tellus. In hac habitasse platea dictumst. Proin sagittis a ex id tempor. Proin faucibus risus non pellentesque vulputate. Morbi augue sem, finibus non leo ut, fermentum auctor massa. Mauris nisi felis, posuere ut efficitur eu, gravida nec enim. Curabitur tempus id nulla in iaculis. Mauris varius accumsan nunc ut pellentesque. Sed placerat vel nisl quis ornare. Ut imperdiet felis et massa facilisis, vel vestibulum erat varius. Etiam tristique dignissim leo, congue tincidunt mi finibus vitae. Suspendisse quis risus eget arcu pharetra tincidunt eu non sapien. Cras sollicitudin, lectus non venenatis ullamcorper, eros quam condimentum libero, nec fermentum purus neque eu eros. Nullam eget blandit nunc. Mauris ultricies sed sapien non aliquam. Etiam bibendum lectus scelerisque neque eleifend, non semper nisi condimentum.</p>
@@ -63,14 +63,14 @@
         <footer>
             <!-- Blog Post Author th:text="${post.author}" -->
             <address>
-                Posted By: <span th:text="${post.author}">Guest User</span>
+                Posted By: <span th:text="${post.author.firstName}">Guest User</span>
             </address>
         </footer>
         <hr/>
     </article>
 
     <footer>
-        <p>Copyright Dan Vega 2015</p>
+        <p>Copyright &copy; 2015</p>
     </footer>
 
 </div>

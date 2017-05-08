@@ -1,15 +1,19 @@
 package com.example.controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * Created by adria on 06.05.2017.
- */
-@RestController
+
+@Controller
 public class HomePageController {
-    @RequestMapping("/example")
-    public String home() {
-        return "Hello World - this is from controller " + "<a href=\"http://localhost:8080\">Home<a/>";
+
+    private String sampleText = "This is sample text for Home Page";
+
+    @RequestMapping("/")
+    public String home(Model model) {
+        model.addAttribute("pageText",sampleText);
+        return "index";
     }
 }
