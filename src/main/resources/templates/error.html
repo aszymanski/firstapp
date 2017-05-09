@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!--  Page Title th:text="${pageTitle}" -->
-    <title th:text="${pageTitle}">Blog Post - List</title>
+    <title th:text="${pageTitle}">Error - 404</title>
 
     <!-- CSS th:href="@{/css/blog.css}" -->
     <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
@@ -41,10 +41,7 @@
             </div>
         </div>
     </nav>
-    <h1>My own template</h1>
-    <p th:text="'Message: ' + ${pageText}"></p>
-    <a href="/posts">List of Posts</a><br/>
-    <a href="/posts/last">Show last post</a>
+    <h1>General error template</h1>
     <footer class="main">
         <p>Copyright &copy; 2015</p>
     </footer>

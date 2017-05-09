@@ -6,6 +6,7 @@ import com.example.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -28,4 +29,5 @@ public class PostService {
     public Post getBySlug(String slug) {
         return postRepository.findBySlug(slug);
     }
+
 }

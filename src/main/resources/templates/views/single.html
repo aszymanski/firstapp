@@ -11,7 +11,7 @@
     <title th:text="${pageTitle}">Blog Post - List</title>
 
     <!-- CSS th:href="@{/css/blog.css}" -->
-    <link rel="stylesheet" href="../static/css/style.css" th:href="@{../static/css/style.css}"/>
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
@@ -41,6 +41,12 @@
             </div>
         </div>
     </nav>
+    <h2>My Posts</h2>
+    <div th:each="singlepost : ${posts}">
+        <a th:text="${singlepost.title}" th:href="@{view/} +${singlepost.slug}">Post title</a>
+        <!-- <span th:text="${slug}"></span> -->
+    </div>
+    <a th:href="@{/css/style.css}">Show me CSS file</a>
     <article>
         <header>
             <!-- Blog Post Title - ${post.title} -->
@@ -65,7 +71,7 @@
         </footer>
         <hr/>
     </article>
-    <footer>
+    <footer class="main">
         <p>Copyright &copy; 2015</p>
     </footer>
 </div>

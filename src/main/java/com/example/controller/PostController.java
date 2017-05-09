@@ -32,6 +32,7 @@ public class PostController {
 
     @RequestMapping("/last")
     public String viewLast(Model model){
+        model.addAttribute("posts",postService.list());
         model.addAttribute("post", postService.getLatestPost());
         return "views/single";
     }
