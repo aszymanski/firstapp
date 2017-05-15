@@ -6,6 +6,7 @@ import com.example.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +29,14 @@ public class PostService {
 
     public Post getBySlug(String slug) {
         return postRepository.findBySlug(slug);
+    }
+
+    public Post get(BigInteger id) {
+        return postRepository.findOne(id);
+    }
+
+    public Post save(Post post) {
+        return postRepository.save(post);
     }
 
 }

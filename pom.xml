@@ -77,10 +77,25 @@
 			</plugin>
 		</plugins>
         <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
+			<resource>
+				<directory>${project.sources}</directory>
+				<filtering>true</filtering>
+				<excludes>
+					<exclude>static/fonts/**</exclude>
+					<exclude>**/*.woff</exclude>
+					<exclude>**/*.ttf</exclude>
+				</excludes>
+			</resource>
+
+			<resource>
+				<directory>${project.sources}</directory>
+				<filtering>false</filtering>
+				<includes>
+					<include>static/fonts/**</include>
+					<include>**/*.woff</include>
+					<include>**/*.ttf</include>
+				</includes>
+			</resource>
         </resources>
 	</build>
 
