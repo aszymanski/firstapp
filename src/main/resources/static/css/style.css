@@ -1,17 +1,195 @@
-p {
-font-size: 14px;
-font-family: Arial;
+body {
+    margin: 0px;
 }
-h1 {
-font-family: Arial;
+section.banner{
+    background-color: #585858;
+    color: #F2F2F2;
+    text-align: center;
+    padding-top: 20pt;
+    padding-bottom: 20pt;
+    font-family: 'Roboto',Times New Roman,serif;
+    box-shadow: 0px 5px 5px rgba(80,80,80,0.5);
+    letter-spacing: 2px;
+    margin-top: 0px;
 }
-a{
-font-family: Arial;
-font-size: 12px;
+section.text{
+    /*background-color: #585858;
+    color: #F2F2F2;
+    text-align: center;*/
+    padding-top: 30pt;
+    padding-bottom: 30pt;
+    font-family: 'Open Sans',Arial,sans-serif;
+    letter-spacing: 1pt;
+    line-height: 25pt;
+    font-size: 12pt;
 }
 
-footer.main {
-margin-left: auto;
-margin-right: auto;
+.nav li {
+    font-family: 'Roboto',Times New Roman,serif;
+}
+footer.main-footer {
+    text-align: center;
+    background: #ababab;
+    color: #fdfdfd;
+    font-family: 'Open Sans',Arial,sans-serif;
+    min-height: 100px;
+    margin: 0px;
+    margin-top:20px;
+    clear: both;
+    color: #fff;
+    display: table;
+    width: 100%;
+}
+
+footer.main-footer p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+
+.main-header h1{
+    font-family: 'Open Sans',Arial,sans-serif;
+    color: #fffdfd;
+    font-weight: bold;
+    letter-spacing: 3px;
+    display: block;
+    text-shadow: 1px 1px 1px black;
+}
+.main-header p{
+    font-family: 'Open Sans',Arial,sans-serif;
+    color: #fffdfd;
+    letter-spacing: 3px;
+    display: block;
+    text-shadow: 1px 1px 1px black;
+}
+
+div.main-header {
+    display: table-cell;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    background: rgba(80,80,80,0.5);
+}
+
+.main-header-content {
+
+}
+@media (min-width:800px) {
+    .header-banner {
+            background-image: url('../images/forrest.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            min-height: 350px;
+            padding: 0px;
+            clear: both;
+            display: table;
+            width: 100%;
+    }
+}
+
+@media (max-width:800px) {
+    .header-banner {
+            background-image: url('../images/forrest.jpg');
+            background-size: auto;
+            background-repeat: no-repeat;
+            min-height: 350px;
+            padding: 0px;
+            clear: both;
+            display: table;
+            width: 100%;
+    }
+}
+
+.navbar {
+    margin: 0px;
+}
+
+.copyright {
+    display: table-cell;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 1pt;
+    font-size: 14pt;
+}
+
+section.footer-banner{
+    background-color: #585858;
+    color: #F2F2F2;
+    text-align: center;
+    padding-top: 20pt;
+    padding-bottom: 20pt;
+    font-family: 'Roboto',Times New Roman,serif;
+    box-shadow: 0px 5px 5px rgba(80,80,80,0.5);
+    letter-spacing: 2px;
+    margin-top: 0px;
+}
+
+a i {
+       text-shadow: 1px 1px 1px black; 
+}
+
+/* SINGLE POST*/
+section.post-header{
+    background-color: #585858;
+    color: #F2F2F2;
+    text-align: center;
+    padding-top: 20pt;
+    padding-bottom: 20pt;
+    font-family: 'Roboto',Times New Roman,serif;
+    box-shadow: 0px 5px 5px rgba(80,80,80,0.5);
+    letter-spacing: 2px;
+    margin-top: 0px;
+}
+
+section.post-body{
+    /*background-color: #585858;
+    color: #F2F2F2;
+    text-align: center;*/
+    padding-top: 30pt;
+    padding-bottom: 30pt;
+    font-family: 'Open Sans',Arial,sans-serif;
+    letter-spacing: 1pt;
+    line-height: 25pt;
+    font-size: 12pt;
+}
+
+.admin {
+    font-size: 80px;
+
+
+}
+
+.admin-item {
+    float: left;
+    margin: 20px;
+    max-width: 105px;
+}
+
+.admin-menu{
+width: 100%;
+height: 100%;
+clear: both;
 text-align: center;
+}
+.admin-item span {
+    margin: auto;
+    width: 100%;
+}
+.admin-menu-section {
+    text-align: center;
+}
+
+form{
+}
+
+.post-input-fields {
+    width: 100%;
+}
+
+div.featurette {
+margin-bottom: 20px;
 }

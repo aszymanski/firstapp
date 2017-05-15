@@ -25,7 +25,7 @@ public class PostController {
     @RequestMapping("")
     public String listPosts(Model model){
         model.addAttribute("posts",postService.list());
-        return "views/list";
+        return "views/posts/list";
     }
 
 
@@ -36,7 +36,7 @@ public class PostController {
             throw new ResourceNotFoundException();
         }
             model.addAttribute("post", postService.getBySlug(slug));
-            return "views/single";
+            return "views/posts/single";
 
     }
 

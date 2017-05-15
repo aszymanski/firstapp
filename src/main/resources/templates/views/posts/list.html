@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymleaf.org">
+    <head>
+        <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+    </head>
+    <body>
+        <nav id="target-top" class="navbar navbar-default">
+            <!--/*/ <th:block th:include="fragments/navigationbar :: navigation"></th:block> /*/-->
+        </nav>
+    <section class="post-header">
+        <div class="container">
+            <h2>Maecenas malesuada elit lectus felis, malesuada ultricies.</h2>
+        </div>
+    </section>
+    <section class="post-body">
+        <div class="container">
+            <div class="row featurette" th:each="post : ${posts}">
+                <div class="col-md-7">
+                    <h2 th:text="${post.title}" class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+                    <p th:utext="${post.teaser}" class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-responsive center-block" src="holder.js/400x400" alt="400x400" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="copyright">
+            <p>Copyright &copy; 2017  Temporibus autem quibusdam et</p><a id="target-bottom"></a>
+        </div>
+    </footer>
+    <script src=".\..\..\lib\jquery\jquery-3.2.1.js"></script>
+    <script src=".\..\..\lib\bootstrap\bootstrap-3.3.7-dist\js\bootstrap.min.js"></script>
+    </body>
+
+</html>

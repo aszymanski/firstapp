@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home page</title>
+        <link href=".\..\..\lib\bootstrap\bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Voltaire" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:300,100" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="./../../css/style.css" rel="stylesheet" type="text/css">
+            <script src=".\..\..\lib\bootstrap\bootstrap-3.3.7-dist\js\bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav id="target-top" class="navbar navbar-default">
+            <div class="container">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Brand</a>
+                    </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Posts <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">Admin</a></li>
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>          
+                        <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </div><!-- /.container -->
+        </nav>
+    <section class="post-header">
+        <div class="container">
+            <h2>Admin panel</h2>
+        </div>
+    </section>
+    <section class="post-body">
+        <div class="container">
+            <div class="admin-menu-section">
+                <h2>Add post</h2>
+                <div class="admin-menu">
+                    <form>
+                        <div class="form-group post-input-fieds">
+                            <label for="title">Post title:</label>
+                            <input type="text" class="form-control" id="title">
+                        </div>
+                        <div class="form-group post-input-fieds">
+                            <label for="slug">Slug:</label>
+                            <input type="text" class="form-control" id="slug">
+                        </div>
+                        <div class="form-group post-input-fieds">
+                            <label for="teaser">Teaser:</label>
+                            <input type="text" class="form-control" id="teaser">
+                        </div>
+                        <div class="form-group post-input-fieds">
+                            <label for="content">Content:</label>
+                            <textarea class="form-control" rows="20" id="content"></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-info" value="Submit Button">
+                    </form>
+                 </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="copyright">
+            <p>Copyright &copy; 2017  Temporibus autem quibusdam et</p><a id="target-bottom"></a>
+        </div>
+    </footer>
+    <script src=".\..\..\lib\jquery\jquery-3.2.1.js"></script>
+    <script src=".\..\..\lib\bootstrap\bootstrap-3.3.7-dist\js\bootstrap.min.js"></script>
+    </body>
+
+</html>

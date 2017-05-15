@@ -1,55 +1,57 @@
 <!DOCTYPE html>
-<html lang="en"
-      xmlns="http://www.w3.org/1999/xhtml"
+<html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymleaf.org">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!--  Page Title th:text="${pageTitle}" -->
-    <title th:text="${pageTitle}">Blog Post - List</title>
-
-    <!-- CSS th:href="@{/css/blog.css}" -->
-    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
-    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css' />
-
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
-<div class="container">
-
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-5" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">My.Example</a>
+    <head>
+        <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+    </head>
+    <body>
+        <nav id="target-top" class="navbar navbar-default">
+            <!--/*/ <th:block th:include="fragments/navigationbar :: navigation"></th:block> /*/-->
+        </nav>
+        <section class="header-banner">
+                <div class="main-header">
+                    <div class="main-header-content">
+                        <h1>Nam libero tempore, cum soluta nobis est</h1>
+                        <p>"Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis"</p>
+                        <a href="#target-bottom">
+                            <i class="fa fa-arrow-circle-down" style="font-size:52px;color:white"></i>
+                        </a>
+                    </div>
+                </div>
+        </section>   
+        <!--<section class="text">
+            <div class="container"></div>
+        </section>-->
+        <section class="banner">
+            <div class="container">
+                <h2>"Itaque earum rerum hic tenetur a sapiente <br/> delectus, ut aut reiciendis"</h2>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
-                <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Guest User</a></p>
+        </section>
+        <section class="text">
+            <div class="container">
+                <p>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
+                </p>
             </div>
-        </div>
-    </nav>
-    <h1>My own template</h1>
-    <p th:text="'Message: ' + ${pageText}"></p>
-    <a href="/posts">List of Posts</a><br/>
-    <a href="/posts/last">Show last post</a>
-    <footer class="main">
-        <p>Copyright &copy; 2015</p>
-    </footer>
-</div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" ></script>
-</body>
+        </section>
+        <section class="banner">
+            <div class="container">
+                <h2>"At vero eos et accusamus et <br/>iusto odio dignissimos"</h2>
+            </div>
+        </section>
+        <section class="text">
+            <div class="container">
+                <p>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
+                </p>
+            </div>
+        </section>
+        <section class="footer-banner">
+            <!--/*/ <th:block th:include="fragments/footer-main :: footermain"></th:block> /*/-->
+        </section>
+
+    <script src="lib\jquery\jquery-3.2.1.js"></script>
+    <script src="lib\bootstrap\bootstrap-3.3.7-dist\js\bootstrap.min.js"></script>
+    </body>
+
 </html>
